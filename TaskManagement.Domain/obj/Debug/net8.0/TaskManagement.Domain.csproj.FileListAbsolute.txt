@@ -1,0 +1,12 @@
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/bin/Debug/net8.0/TaskManagement.Domain.deps.json
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/bin/Debug/net8.0/TaskManagement.Domain.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/bin/Debug/net8.0/TaskManagement.Domain.pdb
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.AssemblyInfoInputs.cache
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.AssemblyInfo.cs
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.csproj.CoreCompileInputs.cache
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.sourcelink.json
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/refint/TaskManagement.Domain.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/TaskManagement.Domain.pdb
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/Debug/net8.0/ref/TaskManagement.Domain.dll

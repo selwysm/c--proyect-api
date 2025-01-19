@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj": {}
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/TaskManagement.Application.csproj": {
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/TaskManagement.Application.csproj",
+        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj",
         "projectName": "TaskManagement.Application",
-        "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/TaskManagement.Application.csproj",
+        "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj",
         "packagesPath": "/home/selwysm/.nuget/packages/",
-        "outputPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/obj/",
+        "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/selwysm/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
-                "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
+              "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+                "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
         "projectName": "TaskManagement.Domain",
-        "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
         "packagesPath": "/home/selwysm/.nuget/packages/",
-        "outputPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/obj/",
+        "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/selwysm/.nuget/NuGet/NuGet.Config"
@@ -124,14 +124,14 @@
         }
       }
     },
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj": {
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj",
+        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj",
         "projectName": "TaskManagement.Infrastructure",
-        "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj",
+        "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj",
         "packagesPath": "/home/selwysm/.nuget/packages/",
-        "outputPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Infrastructure/obj/",
+        "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/selwysm/.nuget/NuGet/NuGet.Config"
@@ -146,11 +146,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/TaskManagement.Application.csproj": {
-                "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Application/TaskManagement.Application.csproj"
+              "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj": {
+                "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj"
               },
-              "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
-                "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
+              "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+                "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
               }
             }
           }

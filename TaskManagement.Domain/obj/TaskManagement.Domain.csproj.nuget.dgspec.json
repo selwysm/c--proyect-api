@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {}
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {}
   },
   "projects": {
-    "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
         "projectName": "TaskManagement.Domain",
-        "projectPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
         "packagesPath": "/home/selwysm/.nuget/packages/",
-        "outputPath": "/home/selwysm/tecnical-testing-proyects/.net-poyect/TaskManagement.Domain/obj/",
+        "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/selwysm/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

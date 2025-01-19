@@ -1,0 +1,16 @@
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/bin/Debug/net8.0/TaskManagement.Application.deps.json
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/bin/Debug/net8.0/TaskManagement.Application.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/bin/Debug/net8.0/TaskManagement.Application.pdb
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/bin/Debug/net8.0/TaskManagement.Domain.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/bin/Debug/net8.0/TaskManagement.Domain.pdb
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.csproj.AssemblyReference.cache
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.AssemblyInfoInputs.cache
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.AssemblyInfo.cs
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.csproj.CoreCompileInputs.cache
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.sourcelink.json
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskMana.B5C26166.Up2Date
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/refint/TaskManagement.Application.dll
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/TaskManagement.Application.pdb
+/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/Debug/net8.0/ref/TaskManagement.Application.dll
