@@ -1,8 +1,11 @@
 using TaskManagement.Domain.Entities;
 using TaskManagement.Domain.Repositories;
+using TaskManagement.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using DomainTaskStatus = TaskManagement.Domain.Entities.TaskStatus;
 
 namespace TaskManagement.Application.Services
 {
@@ -30,15 +33,15 @@ namespace TaskManagement.Application.Services
             if (string.IsNullOrEmpty(task.Title))
                 throw new ArgumentException("El título de la tarea no puede estar vacío.");
 
-            if (string.IsNullOrEmpty(task.Status))
-                task.Status = "Pendiente";
+            if (!Enum.IsDefined(typeof(DomainTaskStatus), task.Status))
+                task.Status = DomainTaskStatus.Pendiente;
 
             await _taskRepository.AddTaskAsync(task);
         }
 
-        public async Task<List<TaskItem>> GetTasksByStatusAsync(string status)
+        public async Task<List<TaskItem>> GetTasksByStatusAsync(DomainTaskStatus status)
         {
-            return await _taskRepository.GetTasksByStatusAsync(status);
+            return await _taskRepository.GetTasksByStatusAsync(status.ToString());
         }
 
         public async Task UpdateTaskAsync(string taskId, TaskItem updatedTask)

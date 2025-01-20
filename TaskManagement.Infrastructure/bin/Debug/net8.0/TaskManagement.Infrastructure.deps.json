@@ -117,6 +117,9 @@
         }
       },
       "TaskManagement.Domain/1.0.0": {
+        "dependencies": {
+          "MongoDB.Bson": "3.1.0"
+        },
         "runtime": {
           "TaskManagement.Domain.dll": {
             "assemblyVersion": "1.0.0",
