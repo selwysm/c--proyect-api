@@ -4,6 +4,8 @@ using TaskManagement.Domain.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using DomainTaskStatus = TaskManagement.Domain.Entities.TaskStatus;
+
 namespace TaskManagement.Infrastructure.Persistence
 {
     public class TaskRepository : ITaskRepository
@@ -33,13 +35,19 @@ namespace TaskManagement.Infrastructure.Persistence
 
         public async Task<List<TaskItem>> GetTasksByStatusAsync(string status)
         {
-            return await _taskCollection.Find(task => task.Status == status).ToListAsync();
+            if (!Enum.TryParse(status, out DomainTaskStatus enumStatus))
+                throw new ArgumentException($"Estado inválido: {status}");
+
+            return await _taskCollection.Find(task => task.Status == enumStatus).ToListAsync();
         }
 
         public async Task UpdateTaskStatusAsync(string taskId, string newStatus)
         {
+            if (!Enum.TryParse(newStatus, out DomainTaskStatus enumStatus))
+                throw new ArgumentException($"Estado inválido: {newStatus}");
+
             var filter = Builders<TaskItem>.Filter.Eq(t => t.Id, taskId);
-            var update = Builders<TaskItem>.Update.Set(t => t.Status, newStatus);
+            var update = Builders<TaskItem>.Update.Set(t => t.Status, enumStatus);
             await _taskCollection.UpdateOneAsync(filter, update);
         }
 
@@ -50,7 +58,7 @@ namespace TaskManagement.Infrastructure.Persistence
                 .Set(t => t.Title, updatedTask.Title)
                 .Set(t => t.Description, updatedTask.Description)
                 .Set(t => t.DueDate, updatedTask.DueDate)
-                .Set(t => t.Status, updatedTask.Status);
+                .Set(t => t.Status, updatedTask.Status); 
 
             await _taskCollection.UpdateOneAsync(filter, update);
         }

@@ -29,6 +29,9 @@
               "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj": {
                 "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj"
               },
+              "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+                "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
+              },
               "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj": {
                 "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Infrastructure/TaskManagement.Infrastructure.csproj"
               }
@@ -60,7 +63,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[7.2.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             }
           },
           "imports": [
@@ -186,6 +193,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

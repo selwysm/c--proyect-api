@@ -2,7 +2,6 @@ using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-
 namespace TaskManagement.Domain.Entities
 {
     public class TaskItem
@@ -14,6 +13,11 @@ namespace TaskManagement.Domain.Entities
         public string? Title { get; set; }
         public string? Description { get; set; }
         public DateTime DueDate { get; set; }
-        public string? Status { get; set; }
+
+        /// <summary>
+        /// Estado de la tarea: Pendiente, EnProgreso, o Completada.
+        /// </summary>
+        [BsonRepresentation(BsonType.String)] 
+        public TaskStatus Status { get; set; } = TaskStatus.Pendiente;
     }
 }
