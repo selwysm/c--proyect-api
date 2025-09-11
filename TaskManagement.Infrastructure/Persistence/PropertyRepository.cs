@@ -58,6 +58,17 @@ namespace TaskManagement.Infrastructure.Persistence
 
             return await PropertyImages.Find(filter).FirstOrDefaultAsync();
         }
+
+        public async Task<string> CreatePropertyAsync(Property property)
+        {
+            await Properties.InsertOneAsync(property);
+            return property.IdProperty!;
+        }
+
+        public async Task CreatePropertyImageAsync(PropertyImage image)
+        {
+            await PropertyImages.InsertOneAsync(image);
+        }
     }
 }
 

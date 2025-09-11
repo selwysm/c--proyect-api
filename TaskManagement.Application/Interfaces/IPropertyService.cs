@@ -8,6 +8,7 @@ namespace TaskManagement.Application.Interfaces
     {
         Task<List<PropertyListItemDto>> SearchAsync(string? name, string? address, decimal? minPrice, decimal? maxPrice);
         Task<PropertyDetailDto?> GetByIdAsync(string propertyId);
+        Task<string> CreateAsync(CreatePropertyRequest request);
     }
 }
 

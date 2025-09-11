@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using TaskManagement.Application.Interfaces;
 using TaskManagement.Application.Models;
 using TaskManagement.Domain.Repositories;
+using TaskManagement.Domain.Entities;
 
 namespace TaskManagement.Application.Services
 {
@@ -55,6 +56,33 @@ namespace TaskManagement.Application.Services
                 Year = property.Year,
                 ImageUrl = image?.File
             };
+        }
+
+        public async Task<string> CreateAsync(CreatePropertyRequest request)
+        {
+            var property = new Property
+            {
+                Name = request.Name,
+                Address = request.Address,
+                Price = request.Price,
+                CodeInternal = request.CodeInternal,
+                Year = request.Year,
+                IdOwner = request.IdOwner
+            };
+
+            var id = await _propertyRepository.CreatePropertyAsync(property);
+
+            if (!string.IsNullOrWhiteSpace(request.ImageUrl))
+            {
+                await _propertyRepository.CreatePropertyImageAsync(new PropertyImage
+                {
+                    IdProperty = id,
+                    File = request.ImageUrl,
+                    Enabled = request.ImageEnabled
+                });
+            }
+
+            return id;
         }
     }
 }

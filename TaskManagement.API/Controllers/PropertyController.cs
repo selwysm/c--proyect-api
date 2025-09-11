@@ -40,6 +40,21 @@ namespace TaskManagement.API.Controllers
             if (detail == null) return NotFound();
             return Ok(detail);
         }
+
+        /// <summary>
+        /// Crea una nueva propiedad con una imagen opcional.
+        /// </summary>
+        [HttpPost]
+        [ProducesResponseType(typeof(string), 201)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> Create([FromBody] CreatePropertyRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Name) || string.IsNullOrWhiteSpace(request.Address))
+                return BadRequest("Name y Address son obligatorios.");
+
+            var id = await _propertyService.CreateAsync(request);
+            return CreatedAtAction(nameof(GetById), new { id }, new { id });
+        }
     }
 }
 

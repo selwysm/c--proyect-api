@@ -10,6 +10,8 @@ namespace TaskManagement.Domain.Repositories
         Task<Property?> GetPropertyByIdAsync(string propertyId);
         Task<Owner?> GetOwnerByIdAsync(string ownerId);
         Task<PropertyImage?> GetMainImageForPropertyAsync(string propertyId);
+        Task<string> CreatePropertyAsync(Property property);
+        Task CreatePropertyImageAsync(PropertyImage image);
     }
 }
 
