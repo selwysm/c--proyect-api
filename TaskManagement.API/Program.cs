@@ -27,9 +27,18 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddHttpClient<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontendPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().SetIsOriginAllowed(_ => true);
+    });
+});
 
 // Configuración de Swagger con ejemplo personalizado para TaskItem
 builder.Services.AddSwaggerGen(options =>
@@ -58,6 +67,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+app.UseCors("FrontendPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
