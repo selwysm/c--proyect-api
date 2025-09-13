@@ -7,6 +7,7 @@ services:
     ports:
       - "5120:8080"
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - MONGO_CONNECTION_STRING=mongodb+srv://mendozaselwys:25kmYrKwNis7kh9c@cluster0.ek0fd.mongodb.net/
       - DATABASE_NAME=TaskManagementDB
       - AUTH0_DOMAIN=dev-pyk3xhommtrhi3du.us.auth0.com
