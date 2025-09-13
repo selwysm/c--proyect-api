@@ -11,11 +11,24 @@ using Microsoft.OpenApi.Any;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Cargar variables de entorno
+// Cargar variables de entorno (no obligatorio en Docker, útil localmente)
 Env.Load();
 
 var mongoConnectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING");
 var databaseName = Environment.GetEnvironmentVariable("DATABASE_NAME");
+
+// Fallback a configuración (appsettings / variables heredadas)
+mongoConnectionString = string.IsNullOrWhiteSpace(mongoConnectionString)
+    ? builder.Configuration["MONGO_CONNECTION_STRING"]
+    : mongoConnectionString;
+databaseName = string.IsNullOrWhiteSpace(databaseName)
+    ? builder.Configuration["DATABASE_NAME"]
+    : databaseName;
+
+if (string.IsNullOrWhiteSpace(mongoConnectionString) || string.IsNullOrWhiteSpace(databaseName))
+{
+    throw new InvalidOperationException("MONGO_CONNECTION_STRING o DATABASE_NAME no configurados. Define variables de entorno o config en appsettings.");
+}
 
 // Registrar servicios en el contenedor
 builder.Services.AddSingleton<IMongoClient, MongoClient>(_ => new MongoClient(mongoConnectionString));
