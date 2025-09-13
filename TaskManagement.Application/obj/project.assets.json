@@ -143,19 +143,19 @@
     ]
   },
   "packageFolders": {
-    "/home/selwysm/.nuget/packages/": {}
+    "/home/heartkush/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj",
+      "projectUniqueName": "/home/heartkush/projects/c--proyect-api/TaskManagement.Application/TaskManagement.Application.csproj",
       "projectName": "TaskManagement.Application",
-      "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/TaskManagement.Application.csproj",
-      "packagesPath": "/home/selwysm/.nuget/packages/",
-      "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Application/obj/",
+      "projectPath": "/home/heartkush/projects/c--proyect-api/TaskManagement.Application/TaskManagement.Application.csproj",
+      "packagesPath": "/home/heartkush/.nuget/packages/",
+      "outputPath": "/home/heartkush/projects/c--proyect-api/TaskManagement.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/selwysm/.nuget/NuGet/NuGet.Config"
+        "/home/heartkush/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -167,8 +167,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
-              "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj"
+            "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+              "projectPath": "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj"
             }
           }
         }
@@ -177,11 +177,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -203,7 +198,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/255/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

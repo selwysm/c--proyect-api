@@ -1,7 +1,6 @@
 using TaskManagement.Infrastructure.Persistence;
 using TaskManagement.Application.Services;
 using TaskManagement.Application.Interfaces;
-using TaskManagement.Domain.Entities;
 using TaskManagement.Domain.Repositories;
 using MongoDB.Driver;
 using DotNetEnv;
@@ -37,8 +36,6 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
     var client = sp.GetRequiredService<IMongoClient>();
     return client.GetDatabase(databaseName);
 });
-builder.Services.AddScoped<ITaskRepository, TaskRepository>();
-builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddHttpClient<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 builder.Services.AddScoped<IPropertyService, PropertyService>();
@@ -53,24 +50,12 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Configuración de Swagger con ejemplo personalizado para TaskItem
+// Configuración de Swagger
 builder.Services.AddSwaggerGen(options =>
 {
     // Agregar documentación en XML
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-
-    // Definir un ejemplo de TaskItem sin el campo "id"
-    options.MapType<TaskItem>(() => new OpenApiSchema
-    {
-        Example = new OpenApiObject
-        {
-            ["title"] = new OpenApiString("Mi tarea de ejemplo"),
-            ["description"] = new OpenApiString("Descripción de la tarea"),
-            ["dueDate"] = new OpenApiString("2025-01-20T04:00:36.824Z"),
-            ["status"] = new OpenApiInteger(0) 
-        }
-    });
 });
 
 var app = builder.Build();

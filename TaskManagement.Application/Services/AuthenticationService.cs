@@ -5,22 +5,37 @@ using System.Threading.Tasks;
 using TaskManagement.Application.Interfaces;
 using System.Text.Json.Serialization;
 
-
-public class AuthenticationService : IAuthenticationService
+namespace TaskManagement.Application.Services
 {
-    private readonly HttpClient _httpClient;
-
-    public AuthenticationService(HttpClient httpClient)
+    public class AuthenticationService : IAuthenticationService
     {
-        _httpClient = httpClient;
-    }
+        private readonly HttpClient _httpClient;
 
-    public async Task<string> GetAccessTokenAsync()
-    {
-        var auth0Domain = Environment.GetEnvironmentVariable("AUTH0_DOMAIN");
-        var clientId = Environment.GetEnvironmentVariable("AUTH0_CLIENT_ID");
-        var clientSecret = Environment.GetEnvironmentVariable("AUTH0_CLIENT_SECRET");
-        var audience = Environment.GetEnvironmentVariable("AUTH0_AUDIENCE");
+        public AuthenticationService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
+        public async Task<string> GetAccessTokenAsync()
+        {
+            // Obtener configuración desde variables de entorno
+            var auth0Domain = Environment.GetEnvironmentVariable("AUTH0_DOMAIN");
+            var clientId = Environment.GetEnvironmentVariable("AUTH0_CLIENT_ID");
+            var clientSecret = Environment.GetEnvironmentVariable("AUTH0_CLIENT_SECRET");
+            var audience = Environment.GetEnvironmentVariable("AUTH0_AUDIENCE");
+
+            // Validar que todos los valores requeridos estén presentes
+            if (string.IsNullOrWhiteSpace(auth0Domain) || string.IsNullOrWhiteSpace(clientId) ||
+                string.IsNullOrWhiteSpace(clientSecret) || string.IsNullOrWhiteSpace(audience))
+            {
+                throw new InvalidOperationException("Configuración de Auth0 incompleta. Verifique que las variables de entorno AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET y AUTH0_AUDIENCE estén configuradas.");
+            }
+
+            // Validar que el dominio tenga el formato correcto
+            if (!auth0Domain.Contains("."))
+            {
+                throw new InvalidOperationException($"Formato de dominio Auth0 inválido: {auth0Domain}");
+            }
 
         var requestBody = new
         {
@@ -41,19 +56,20 @@ public class AuthenticationService : IAuthenticationService
 
         var responseString = await response.Content.ReadAsStringAsync();
 
-        var responseObject = JsonSerializer.Deserialize<Auth0TokenResponse>(responseString);
-        return responseObject?.AccessToken ?? string.Empty;
+            var responseObject = JsonSerializer.Deserialize<Auth0TokenResponse>(responseString);
+            return responseObject?.AccessToken ?? string.Empty;
+        }
     }
-}
 
-public class Auth0TokenResponse
-{
-    [JsonPropertyName("access_token")]
-    public string AccessToken { get; set; }
+    public class Auth0TokenResponse
+    {
+        [JsonPropertyName("access_token")]
+        public string AccessToken { get; set; } = string.Empty;
 
-    [JsonPropertyName("token_type")]
-    public string TokenType { get; set; }
+        [JsonPropertyName("token_type")]
+        public string TokenType { get; set; } = string.Empty;
 
-    [JsonPropertyName("expires_in")]
-    public int ExpiresIn { get; set; }
+        [JsonPropertyName("expires_in")]
+        public int ExpiresIn { get; set; }
+    }
 }

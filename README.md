@@ -1,9 +1,10 @@
-# 📌 API de Gestión de Tareas
+# 📌 API de Gestión de Propiedades
 
-Este es un proyecto de API RESTful desarrollado en **.NET 8** que permite a los usuarios gestionar tareas, siguiendo principios de **Arquitectura Limpia** y **SOLID**.  
+Este es un proyecto de API RESTful desarrollado en **.NET 8** que permite a los usuarios gestionar propiedades inmobiliarias, siguiendo principios de **Arquitectura Limpia** y **SOLID**.
 La API está documentada con **Swagger**, se ejecuta en **Docker**, y almacena datos en **MongoDB**.
 
 ## Tabla de Contenidos
+
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Docker](#docker)
@@ -18,6 +19,7 @@ La API está documentada con **Swagger**, se ejecuta en **Docker**, y almacena d
 ---
 
 ## ✅ **Requisitos Previos**
+
 - **.NET 8.0** instalado
 - **Docker** (opcional, si deseas ejecutar la aplicación en contenedores)
 - **MongoDB** en ejecución (local o en la nube)
@@ -25,76 +27,100 @@ La API está documentada con **Swagger**, se ejecuta en **Docker**, y almacena d
 ---
 
 ## 🚀 **Instalación**
-1. **Clonar el repositorio**  
+
+1. **Clonar el repositorio**
+
    ```sh
    git clone https://github.com/selwysm/c--proyect-api.git
-   
-2. **Restaurar dependencias**  
+
+   ```
+
+2. **Restaurar dependencias**
+
    ```sh
    dotnet restore
-   
+
+   ```
+
 3. **Configurar variables de entorno**
-   Crea un archivo .env con los siguientes valores: 
+   Crea un archivo .env con los siguientes valores:
+
    ```env
    MONGO_CONNECTION_STRING=valores
-   DATABASE_NAME=TaskManagementDB
+   DATABASE_NAME=PropertiesBD
    AUTH0_DOMAIN=valores
    AUTH0_CLIENT_ID=valores
    AUTH0_CLIENT_SECRET=valores
    AUTH0_AUDIENCE=valores
-   
+
+   ```
+
 4. **Ejecutar la API**
    ```sh
    dotnet run
+   ```
 
 ## 📦 Docker
-   📌 Ejecutar con Docker
-   Este comando levanta la API y conecta una base de datos MongoDB.
-   ```sh
-   docker-compose up --build
-   ```
+
+📌 Ejecutar con Docker
+Este comando levanta la API y conecta una base de datos MongoDB.
+
+```sh
+docker-compose up --build
+```
 
 ## 📖 Test y Swagger
-   La API está documentada con Swagger, que permite visualizar y probar los endpoints sin necesidad de usar Postman.
-   Puedes acceder a la interfaz en:
-   ```sh
-   http://localhost:5120/swagger/index.html
-   ```
+
+La API está documentada con Swagger, que permite visualizar y probar los endpoints sin necesidad de usar Postman.
+Puedes acceder a la interfaz en:
+
+```sh
+http://localhost:5120/swagger/index.html
+```
 
 ## 📌 Uso (Endpoints)
+
 ## 📌 Endpoints Disponibles
 
-| Método  | Endpoint                 | Descripción                 |
-|---------|--------------------------|-----------------------------|
-| `GET`    | `/api/task`              | Obtener todas las tareas    |
-| `POST`   | `/api/task/add`          | Agregar una nueva tarea     |
-| `GET`    | `/api/task/status/{status}` | Obtener tareas por estado   |
-| `PUT`    | `/api/task/{id}`         | Actualizar una tarea        |
-| `DELETE` | `/api/task/{id}`         | Eliminar una tarea          |
+### 🏠 Propiedades
 
-## 📌 Estados Permitidos para `status`
+| Método | Endpoint             | Descripción                      |
+| ------ | -------------------- | -------------------------------- |
+| `GET`  | `/api/property`      | Buscar propiedades (con filtros) |
+| `GET`  | `/api/property/{id}` | Obtener detalle de propiedad     |
+| `POST` | `/api/property`      | Crear nueva propiedad            |
 
-| Código | Estado       |
-|--------|-------------|
-| 0      | Pendiente   |
-| 1      | En Progreso |
-| 2      | Completada  |
+### 🔐 Autenticación
 
-Para agregar o actualizar tareas, el `status` debe enviarse como un número entre **0 y 2**.
+| Método | Endpoint          | Descripción             |
+| ------ | ----------------- | ----------------------- |
+| `GET`  | `/api/auth/token` | Obtener token de acceso |
+
+## 📌 Filtros de Búsqueda de Propiedades
+
+Puedes filtrar las propiedades usando los siguientes parámetros de query:
+
+- `name` - Nombre de la propiedad
+- `address` - Dirección
+- `minPrice` - Precio mínimo
+- `maxPrice` - Precio máximo
+
+Ejemplo: `/api/property?name=casa&minPrice=100000&maxPrice=500000`
 
 ## 🌐 Consumo de API Externa
 
-Este proyecto implementa autenticación a través de Auth0.  
+Este proyecto implementa autenticación a través de Auth0.
 Para obtener un token de autenticación:
 
 ```sh
 GET /api/auth/token
 ```
+
 ### Respuesta:
 
 ```json
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIs...",
+  "accessToken": "eyJhbGciOiJIUzI1NiIs..."
 }
 ```
 
@@ -111,12 +137,11 @@ GET /api/auth/token
 
 ## 🔥 Principios SOLID Aplicados
 
-- **S:** Single Responsibility *(Cada clase tiene una única responsabilidad)*
-- **O:** Open/Closed *(El código es extensible sin modificar la base)*
-- **L:** Liskov Substitution *(Se usan interfaces y polimorfismo correctamente)*
-- **I:** Interface Segregation *(Interfaces específicas para cada funcionalidad)*
-- **D:** Dependency Inversion *(Uso de inyección de dependencias)*
-
+- **S:** Single Responsibility _(Cada clase tiene una única responsabilidad)_
+- **O:** Open/Closed _(El código es extensible sin modificar la base)_
+- **L:** Liskov Substitution _(Se usan interfaces y polimorfismo correctamente)_
+- **I:** Interface Segregation _(Interfaces específicas para cada funcionalidad)_
+- **D:** Dependency Inversion _(Uso de inyección de dependencias)_
 
 ## 🚀 Manejo de Repositorios
 
@@ -134,6 +159,6 @@ git push origin feature/agregar-autenticacion
 
 ## 👨‍💻 Desarrollado por
 
-**Selwys Mendoza**
+**Ismael Parra**
 
-https://www.linkedin.com/in/selwys-mendoza-115b68251/
+https://www.linkedin.com/in/ismaelparra

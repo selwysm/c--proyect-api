@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {}
+    "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj": {}
   },
   "projects": {
-    "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj": {
+    "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "projectUniqueName": "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj",
         "projectName": "TaskManagement.Domain",
-        "projectPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/TaskManagement.Domain.csproj",
-        "packagesPath": "/home/selwysm/.nuget/packages/",
-        "outputPath": "/home/selwysm/tecnical-testing-proyects/c#-proyect/TaskManagement.Domain/obj/",
+        "projectPath": "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/TaskManagement.Domain.csproj",
+        "packagesPath": "/home/heartkush/.nuget/packages/",
+        "outputPath": "/home/heartkush/projects/c--proyect-api/TaskManagement.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/selwysm/.nuget/NuGet/NuGet.Config"
+          "/home/heartkush/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/255/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
